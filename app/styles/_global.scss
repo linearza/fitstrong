@@ -1,0 +1,18 @@
+html{
+  font-family: 'Roboto', sans-serif;
+}
+
+
+html, body, #application, #ember361{ 
+  height: 100%;
+  overflow: hidden;
+}
+
+#application, #ember361{
+  padding: 50px 0;
+  box-sizing: border-box;
+}
+
+p{
+  line-height: 1.5em;
+}
