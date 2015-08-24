@@ -1,5 +1,5 @@
 <header class="app-header">
-  <nav>
+  {{!-- <nav>
     <select>
       <option>Home</option>
       <option>2</option>
@@ -8,14 +8,17 @@
       <option>5</option>
       <option>6</option>
     </select>
-  </nav>
-  
+  </nav> --}}
+  <div class="logo">
+    <img src="assets/images/fitstrong-logo-white-med.png" alt="FITstrong" />
+    <span class="tag">Get fit. Get strong. Get living.</span>
+  </div>
 </header>
-{{!-- Maybe floating fixed --}}
+
 <main>
 
   <div class="banner">
-    <img src="assets/images/fitstrong-wallpaper.jpg" />
+    <img class="logo" src="assets/images/fitstrong-logo-med.png" alt="FITstrong" />
   </div>
 
   <article>
@@ -29,10 +32,7 @@
   {{outlet}}
 </main>
 
-{{!-- Maybe floating fixed --}}
 <footer class="app-footer">
-  {{!-- <span>&copy; 2015 Copyright Company</span> --}}
-
   <ul class="social">
     <li>{{partial 'svg/ico-facebook'}}</li>
     <li>{{partial 'svg/ico-twitter'}}</li>
