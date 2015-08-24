@@ -25,6 +25,12 @@
         max-height: 100%;
         fill: $white;
       }
+      &:active{
+        background: $white;
+        svg{
+          fill: $orange;
+        }
+      }
     }
   }
   &:before{
