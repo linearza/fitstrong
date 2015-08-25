@@ -1,17 +1,17 @@
 <header class="app-header">
-{{!--   <nav>
-    <select>
-      <option>Home</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-      <option>6</option>
-    </select>
-  </nav>
-  <div class="logo">
-    <img src="assets/images/fitstrong-logo-white-med.png" alt="FITstrong" />
-  </div> --}}
+  {{!--   <nav>
+      <select>
+        <option>Home</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+      </select>
+    </nav>
+    <div class="logo">
+      <img src="assets/images/fitstrong-logo-white-med.png" alt="FITstrong" />
+    </div> --}}
 </header>
 
 <main>
@@ -32,10 +32,21 @@
 </main>
 
 <footer class="app-footer">
-  <ul class="social">
+  <ul class="menu {{if isMenuExpanded 'is-expanded'}}">
+    <li class="more" {{action 'toggleMenu'}}>{{partial 'svg/ico-arrow'}}</li>
+
+
+    <li>{{partial 'svg/ico-brochure'}}</li>
+    <li>{{partial 'svg/ico-calendar'}}</li>
+    <li>{{partial 'svg/ico-booking'}}</li>
+    
+    <li>{{partial 'svg/ico-map'}}</li>
+    <li>{{partial 'svg/ico-phone'}}</li>
+    <li>{{partial 'svg/ico-mail'}}</li>
+    
     <li>{{partial 'svg/ico-facebook'}}</li>
     <li>{{partial 'svg/ico-twitter'}}</li>
-    <li>{{partial 'svg/ico-mail'}}</li>
-    <li>{{partial 'svg/ico-phone'}}</li>
+    <li>{{partial 'svg/ico-youtube'}}</li>
   </ul>
+
 </footer>

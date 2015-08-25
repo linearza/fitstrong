@@ -15,10 +15,10 @@ module.exports = function(environment) {
 
     contentSecurityPolicy: {
       'default-src': "'none'",
-      'script-src': "'self' 'unsafe-eval' 'unsafe-inline' https://*.firebase.com https://*.firebaseio.com",
+      'script-src': "'self' 'unsafe-eval' 'unsafe-inline' http://samewave.dev:49152/livereload.js?snipver=1 https://*.firebase.com https://*.firebaseio.com",
       'font-src': "'self' data: http://fonts.gstatic.com",
       'frame-src': "https://*.firebase.com https://*.firebaseio.com",
-      'connect-src': "'self' https://api.cloudinary.com res.cloudinary.com https://*.firebase.com https://*.firebaseio.com wss://*.firebaseio.com samewave-client-staging.herokuapp.com samewave-client-demo.herokuapp.com samewave-engine-production.herokuapp.com data:",
+      'connect-src': "'self' ws://samewave.dev:49152/livereload https://api.cloudinary.com res.cloudinary.com https://*.firebase.com https://*.firebaseio.com wss://*.firebaseio.com samewave-client-staging.herokuapp.com samewave-client-demo.herokuapp.com samewave-engine-production.herokuapp.com data:",
       'img-src': "'self' res.cloudinary.com api.cloudinary.com data:",
       'style-src': "'self' 'unsafe-inline' fonts.googleapis.com",
       'media-src': "'self'",

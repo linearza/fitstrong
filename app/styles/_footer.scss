@@ -7,13 +7,21 @@
   color: $white;
   padding: 10px;
   box-sizing: border-box;
-  .social{
+  .menu{
+    @include user-select(none);
     display: inline-block;
+    text-align:right;
     list-style: none;
     margin: 0;
     position: absolute;
-    right: 10px;
+    right: 0px;
+    left: 0px;
     top:0px;
+    padding: 0 10px;
+    background-color: $orange;
+    direction: rtl;
+    @include transition(transform 200ms linear);
+    @include transform(translate3d(0px, 0px,0px));
     li{
       display: inline-block;
       width: 40px;
@@ -31,28 +39,47 @@
           fill: $orange;
         }
       }
+      &.more{
+        @include transition(transform 200ms ease);
+      }
     }
-  }
-  &:before{
-    content: '';
-    height: 2px;
-    width: 100%;
-    position: absolute;
-    top:-2px;
-    left:0;
-    background: $black;
-    opacity: 0.2;
-    z-index:1;
-  }
-  &:after{
-    content: '';
-    height: 1px;
-    width: 100%;
-    position: absolute;
-    top:-3px;
-    left:0;
-    background: $black;
-    opacity: 0.1;
-    z-index:1;
+    &.is-expanded{
+      @include transform(translate3d(0px, -40px,0px));
+      li{
+        &.more{
+          @include transform(rotate(540deg));
+        }
+      }
+    }
+    &:before{
+      content: '';
+      height: 2px;
+      width: 100%;
+      position: absolute;
+      top:-2px;
+      left:0;
+      background: $black;
+      opacity: 0.2;
+      z-index:1;
+    }
+    &:after{
+      content: '';
+      height: 1px;
+      width: 100%;
+      position: absolute;
+      top:-3px;
+      left:0;
+      background: $black;
+      opacity: 0.1;
+      z-index:1;
+    }
+    @media (min-width: 460px) {
+      @include transform(translate3d(0px, 0px,0px) !important);
+      li{
+        &.more{
+          display: none;
+        }
+      }
+    }
   }
 }

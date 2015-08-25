@@ -3,14 +3,18 @@ html{
 }
 
 
-html, body, #application, #ember361{ 
+html, body{ 
   height: 100%;
   overflow: hidden;
 }
 
-#application, #ember361{
-  padding: 0 0 40px 0;
-  box-sizing: border-box;
+.ember-application{
+  & > .ember-view{
+    height: 100%;
+    overflow: hidden;
+    padding: 0 0 40px 0;
+    box-sizing: border-box;
+  }
 }
 
 p{
