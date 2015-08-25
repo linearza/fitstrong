@@ -1,13 +1,18 @@
+
+
 .membership-option{
-  background: $black;
+  @include linear-gradient($yellow-lgt, $yellow);
   padding: 10px;
   text-align: center;
+  margin-bottom: 3px;
   .title{
     margin: 0;
+    color: $grey;
     font-size: 19px;
     white-space: nowrap;
-    border-bottom: 1px solid $orange;
-    padding-bottom: 7px;
+    background: rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid $white;
+    padding: 7px 0;
     font-weight: 700;
   }
   .description{
@@ -16,17 +21,47 @@
   }
   .contracts{
     font-weight: 400;
-    background: $white;
+    background: rgba(255, 255, 255, 0.2);
     margin: 0;
     padding: 3px;
-    color: #000;
+    color: $white;
   }
   .contracts-table{
     width: 100%;
     font-size: 14px;
-    td{
-      padding: 10px;
-      border: 1px solid $white;
+    tr{
+      td{
+        padding: 10px;
+        border: 1px solid $white;
+        background: $grey-drk;
+      }
+      &:first-child{
+        td{
+          background: $grey;
+        }
+      }
     }
+  }
+  &.bootcamp{
+     @include linear-gradient($yellow, $yellow-drk);
+  }
+  &.all-inclusive-one{
+     @include linear-gradient($yellow-drk, $orange-lgt);
+  }
+  &.all-inclusive-two{
+     @include linear-gradient($orange-lgt, $orange);
+  }
+  &.all-inclusive-three{
+     @include linear-gradient($orange, $red-lgt);
+  }
+  @media (min-width: 575px) {
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    .description{
+      min-height: 57px;
+    }
+
   }
 }
