@@ -6,6 +6,11 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('index', {
+    path: '/'
+  });
+
+  this.route('membership-options');
 });
 
 export default Router;

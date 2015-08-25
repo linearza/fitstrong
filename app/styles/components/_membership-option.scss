@@ -1,0 +1,32 @@
+.membership-option{
+  background: $black;
+  padding: 10px;
+  text-align: center;
+  .title{
+    margin: 0;
+    font-size: 19px;
+    white-space: nowrap;
+    border-bottom: 1px solid $orange;
+    padding-bottom: 7px;
+    font-weight: 700;
+  }
+  .description{
+    margin: 5px 0 10px;
+    font-weight: 300;
+  }
+  .contracts{
+    font-weight: 400;
+    background: $white;
+    margin: 0;
+    padding: 3px;
+    color: #000;
+  }
+  .contracts-table{
+    width: 100%;
+    font-size: 14px;
+    td{
+      padding: 10px;
+      border: 1px solid $white;
+    }
+  }
+}
