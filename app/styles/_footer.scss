@@ -39,6 +39,9 @@
           fill: $orange;
         }
       }
+      &.active{
+        background: rgba(255, 255, 255, 0.2);
+      }
       &.more{
         @include transition(transform 200ms ease);
       }

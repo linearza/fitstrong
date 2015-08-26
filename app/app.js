@@ -15,4 +15,17 @@ App = Ember.Application.extend({
 
 loadInitializers(App, config.modulePrefix);
 
+
+Ember.Router.reopen({
+
+  applicationController: function() {
+    return this.container.lookup('controller:application');
+  },
+
+  closeMenu: function() {
+    this.applicationController().set('isMenuExpanded', false);
+  }.on('willTransition')
+
+});
+
 export default App;
