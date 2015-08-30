@@ -1,65 +1,87 @@
 .membership-option{
-  @include linear-gradient($yellow-lgt, $yellow);
+  background: $grey;
+  border-radius: 5px;
   padding: 10px;
   text-align: center;
   margin-bottom: 3px;
+  position: relative;
   .title{
     margin: 0;
-    color: $grey;
+    color: $white;
     font-size: 19px;
     white-space: nowrap;
-    background: rgba(255, 255, 255, 0.6);
-    border-bottom: 1px solid $white;
+    background: rgba(255, 255, 255, 0.1);
     padding: 7px 0;
     font-weight: 400;
   }
   .description{
-    margin: 5px 0 10px;
-    font-weight: 400;
+    margin: 0;
+    font-weight: 300;
     font-size: 14px;
-    border: 1px solid $white;
-    color: $grey-drk;
+    color: $white;
     padding: 6px;
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.2);  
   }
   .contracts{
     font-weight: 400;
     font-size: 16px;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.25);
     margin: 0;
     padding: 3px;
-    color: $grey-drk;
+    color: $white;
+    border-top: 1px solid $grey;
   }
   .contracts-table{
     width: 100%;
     font-size: 14px;
     tr{
       td{
-        padding: 10px;
-        border: 1px solid $white;
+        padding: 5px;
+        border: 1px solid $grey;
         background: $grey-drk;
         width: 50%;
         font-weight: 300;
+        font-size: 18px;
       }
       &:first-child{
         td{
           background: $grey;
           font-weight: 400;
+          font-size: 14px;
+          padding: 10px;
         }
       }
     }
   }
+  &:after{
+    content: '';
+    position: absolute;
+    border-radius: 5px 0px 0px 5px;
+    left:0;
+    top:0;
+    bottom:0;
+    width: 8px;
+    @include linear-gradient($yellow-lgt, $yellow); 
+  }
   &.bootcamp{
+    &:after{
      @include linear-gradient($yellow, $yellow-drk);
+    }
   }
   &.all-inclusive-one{
+    &:after{
      @include linear-gradient($yellow-drk, $orange-lgt);
+    }
   }
   &.all-inclusive-two{
+    &:after{
      @include linear-gradient($orange-lgt, $orange);
+    }
   }
   &.all-inclusive-three{
+    &:after{
      @include linear-gradient($orange, $red-lgt);
+    }
   }
   @media (min-width: 575px) {
     width: 49%;
