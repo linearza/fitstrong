@@ -1,0 +1,382 @@
+{{!-- 
+
+  REMOVE THIS! 
+  
+--}}
+
+<script>
+
+/*Converts PHP variables to Javascript variables*/
+monday_date = "31 Aug 2015";
+tuesday_date = "01 Sep 2015";
+wednesday_date = "02 Sep 2015";
+thursday_date = "03 Sep 2015";
+friday_date = "04 Sep 2015";
+saturday_date = "05 Sep 2015";
+
+monday_names = {"1":[],"2":[],"3":[],"4":[],"5":[],"6":[],"7":[],"8":[],"9":[],"10":[],"11":[]};
+tuesday_names = {"1":[],"2":[],"3":[],"4":[],"5":[],"6":[],"7":[],"8":[],"9":[],"10":[]};
+wednesday_names = {"1":[],"2":[],"3":[],"4":[],"5":[],"6":[],"7":[],"8":[],"9":[],"10":[],"11":[]};
+thursday_names = {"1":[],"2":[],"3":[],"4":[],"5":[],"6":[],"7":[],"8":[],"9":[],"10":[]};
+friday_names = {"1":[],"2":[],"3":[],"4":[],"5":[],"6":[],"7":[],"8":[],"9":[],"10":[]};
+saturday_names = {"1":[],"2":[],"3":[],"4":[],"5":[],"6":[],"7":[],"8":[],"9":[],"10":[]};
+
+/*This gets the length of the first slot on monday
+alert(monday_names[1].length);
+/*******/
+
+function getClassName(day,classnum){
+  name = "none";
+  switch(day){
+    case 1:
+      switch(classnum){
+        case 1: return "Gladiator"; break;
+        case 2: return "Bootcamp"; break;
+        case 3: return "FITstrong"; break;
+        case 4: return "Gladiator"; break;
+        case 5: return ""; break;
+        case 6: return "Gladiator"; break;
+        case 7: return "FITstrong"; break;
+        case 8: return ""; break;
+        case 9: return "Gladiator"; break;
+        case 10: return "Bootcamp"; break;
+        case 11: return "Pilates"; break;
+      }
+    break;
+    case 2:
+      switch(classnum){
+        case 1: return "Bootcamp"; break;
+        case 2: return "FITstrong"; break;
+        case 3: return "Bootcamp"; break;
+        case 4: return "Gladiator"; break;
+        case 5: return ""; break;
+        case 6: return "Bootcamp"; break;
+        case 7: return "FITstrong"; break;
+        case 8: return ""; break;
+        case 9: return "Bootcamp"; break;
+        case 10: return "Gladiator"; break;
+      }
+    break;
+    case 3:
+      switch(classnum){
+        case 1: return "Gladiator"; break;
+        case 2: return "Bootcamp"; break;
+        case 3: return "FITstrong"; break;
+        case 4: return "Gladiator / Pilates"; break;
+        case 5: return ""; break;
+        case 6: return "Gladiator"; break;
+        case 7: return "FITstrong (Obstacle Course)"; break;
+        case 8: return ""; break;
+        case 9: return "Gladiator"; break;
+        case 10: return "Bootcamp"; break;
+        case 11: return "Pilates"; break;
+      }
+    break;
+    case 4:
+      switch(classnum){
+        case 1: return "Bootcamp"; break;
+        case 2: return "FITstrong"; break;
+        case 3: return "Bootcamp"; break;
+        case 4: return "Gladiator"; break;
+        case 5: return ""; break;
+        case 6: return "Bootcamp"; break;
+        case 7: return "FITstrong"; break;
+        case 8: return ""; break;
+        case 9: return "Bootcamp"; break;
+        case 10: return "Gladiator"; break;
+      }
+    break;
+    case 5:
+      switch(classnum){
+        case 1: return "Gladiator"; break;
+        case 2: return "Bootcamp"; break;
+        case 3: return "FITstrong"; break;
+        case 4: return "Gladiator"; break;
+        case 5: return ""; break;
+        case 6: return "FITstrong"; break;
+        case 7: return ""; break;
+        case 8: return "Friday FIT"; break;
+        case 9: return ""; break;
+        case 10: return ""; break;
+      }
+    break;
+    case 6:
+      switch(classnum){
+        case 1: return ""; break;
+        case 2: return ""; break;
+        case 3: return "FITstrong"; break;
+        case 4: return "Gladiator"; break;
+        case 5: return "Boot Camp"; break;
+        case 6: return ""; break;
+        case 7: return ""; break;
+        case 8: return ""; break;
+        case 9: return ""; break;
+        case 10: return ""; break;
+      }
+    break;
+  }
+}
+
+function getSignedUpList(day,classnum){
+  switch (day){
+    case 1: dayarr=monday_names; break;
+    case 2: dayarr=tuesday_names; break;
+    case 3: dayarr=wednesday_names; break;
+    case 4: dayarr=thursday_names; break;
+    case 5: dayarr=friday_names; break;
+    case 6: dayarr=saturday_names; break;
+  }
+  loopnum = dayarr[classnum].length;
+  i=0;
+  htmlstring="";
+  while(i<loopnum){
+    htmlstring = htmlstring + "<tr><td><form method=\"GET\" action=\"remove.php\">";
+    htmlstring = htmlstring + "<input name=\"day\" type=\"hidden\" value=\""+selectedDay+"\"/>";
+    htmlstring = htmlstring + "<input name=\"classnum\" type=\"hidden\" value=\""+selectedClass+"\"/>";
+    <!--htmlstring = htmlstring + "<input type=\"submit\" value=\"X\" class=\"remove\" />";-->
+    htmlstring = htmlstring + "<input name=\"name\" type=\"hidden\" id=\"name\" value=\""+dayarr[classnum][i]["name"]+"\"/>";
+    htmlstring = htmlstring + "<label name=\"name2\" id=\"name2\">\t"+dayarr[classnum][i]["name"]+"</label>";
+    htmlstring = htmlstring + "</form></td></tr>\n";
+    i++;
+  }
+  
+  /*Limits size of classes depending on what class*/
+  className = getClassName(day,classnum);
+  if(className == "Gladiator" || className == "Friday FIT"){
+    if(loopnum>17){
+      document.getElementById("submit").disabled = true;
+    }
+    if(loopnum<18){
+      document.getElementById("submit").disabled = false;
+    }
+  }
+  else if(className == "Bootcamp"){
+    if(loopnum>24){
+      document.getElementById("submit").disabled = true;
+    }
+    if(loopnum<25){
+      document.getElementById("submit").disabled = false;
+    }
+  }
+  else if(className == "FITstrong" || className == "FITstrong (Obstacle Course)"){
+    if(loopnum>14){
+      document.getElementById("submit").disabled = true;
+    }
+    if(loopnum<15){
+      document.getElementById("submit").disabled = false;
+    }
+  }
+  else if(className == "Pilates"){
+    if(loopnum>9){
+      document.getElementById("submit").disabled = true;
+    }
+    if(loopnum<10){
+      document.getElementById("submit").disabled = false;
+    }
+  }
+  
+  return htmlstring;
+}
+</script> <script src="js/jquery-1.11.3.js"></script>
+  <script src="js/popup.js"></script>
+  <script>
+    selectedDay = 1;
+    selectedClass = 1;
+    selectedTime = '05h30-06h30';
+    selectedDate = "01 Jan 1970";
+    $(document).ready(function() {
+      $(".class").click(function(){
+        $("#class_heading").html(getClassName(selectedDay,selectedClass));
+        $("#date").html(selectedDate);
+        $("#time").html(selectedTime);
+        
+        document.getElementById('signup_day').value = selectedDay;
+        document.getElementById('signup_classnum').value = selectedClass;
+        
+        $("#names").html(getSignedUpList(selectedDay,selectedClass));
+        
+      });
+    });
+  </script>
+</head>
+<body>
+    <center>
+  <table>
+    <!--TOP ROW-->
+    <tbody><tr>
+      <td class="day">TIME</td>
+      <td class="day">MON<br>31 Aug 2015</td>
+      <td class="day">TUES<br>01 Sep 2015</td>
+      <td class="day">WED<br>02 Sep 2015</td>
+      <td class="day">THURS<br>03 Sep 2015</td>
+      <td class="day">FRI<br>04 Sep 2015</td>
+      <td class="day">SAT<br>05 Sep 2015</td>
+    </tr>
+    <!--TOP ROW-->
+    
+    <!--MORNING-->
+    <tr>
+        <td class="ampm">Morning</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <!--05h30-06h30-->
+      <tr>
+        <td>05h30-06h30</td>
+        <td class="class" onclick="selectedDay = 1; selectedClass = 1; selectedDate = monday_date; selectedTime = '05h30-06h30'">Gladiator<br> (0/18)</td>
+        <td class="class" onclick="selectedDay = 2; selectedClass = 1; selectedDate = tuesday_date; selectedTime = '05h30-06h30'">Boot Camp<br> (0/25)</td>
+        <td class="class" onclick="selectedDay = 3; selectedClass = 1; selectedDate = wednesday_date; selectedTime = '05h30-06h30'">Gladiator<br> (0/18)</td>
+        <td class="class" onclick="selectedDay = 4; selectedClass = 1; selectedDate = thursday_date; selectedTime = '05h30-06h30'">Boot Camp<br> (0/25)</td>
+        <td class="class" onclick="selectedDay = 5; selectedClass = 1; selectedDate = friday_date; selectedTime = '05h30-06h30'">Gladiator<br> (0/18)</td>
+        <td> </td>
+      </tr>
+      <!--06h30-07h30-->
+      <tr>
+        <td>06h30-07h30</td>
+        <td class="class" onclick="selectedDay = 1; selectedClass = 2; selectedDate = monday_date; selectedTime = '06h30-07h30'">Boot Camp<br> (0/25)</td>
+        <td class="class" onclick="selectedDay = 2; selectedClass = 2; selectedDate = tuesday_date; selectedTime = '06h30-07h30'">FITstrong<br> (0/15)</td>
+        <td class="class" onclick="selectedDay = 3; selectedClass = 2; selectedDate = wednesday_date; selectedTime = '06h30-07h30'">Boot Camp<br> (0/25)</td>
+        <td class="class" onclick="selectedDay = 4; selectedClass = 2; selectedDate = thursday_date; selectedTime = '06h30-07h30'">FITstrong<br> (0/15)</td>
+        <td class="class" onclick="selectedDay = 5; selectedClass = 2; selectedDate = friday_date; selectedTime = '06h30-07h30'">Boot Camp<br> (0/25)</td>
+        <td></td>
+      </tr>
+      <!--07h00-08h00-->
+      <tr>
+        <td>07h00-08h00</td>
+        <td class="class" onclick="selectedDay = 1; selectedClass = 3; selectedDate = monday_date; selectedTime = '07h00-08h00'">FITstrong<br> (0/15)</td>
+        <td class="class" onclick="selectedDay = 2; selectedClass = 3; selectedDate = tuesday_date; selectedTime = '07h00-08h00'">Boot Camp<br> (0/25)</td>
+        <td class="class" onclick="selectedDay = 3; selectedClass = 3; selectedDate = wednesday_date; selectedTime = '07h00-08h00'">FITstrong<br> (0/15)</td>
+        <td class="class" onclick="selectedDay = 4; selectedClass = 3; selectedDate = thursday_date; selectedTime = '07h00-08h00'">Boot Camp<br> (0/25)</td>
+        <td class="class" onclick="selectedDay = 5; selectedClass = 3; selectedDate = friday_date; selectedTime = '07h00-08h00'">FITstrong<br> (0/15)</td>
+        <td class="class" onclick="selectedDay = 6; selectedClass = 3; selectedDate = saturday_date; selectedTime = '07h00-08h00'">FITstrong<br> (0/15)</td>
+      </tr>
+      <!--08h00-09h00-->
+      <tr>
+        <td>08h00-09h00</td>
+        <td class="class" onclick="selectedDay = 1; selectedClass = 4; selectedDate = monday_date; selectedTime = '08h00-09h00'">Gladiator<br> (0/18)</td>
+        <td class="class" onclick="selectedDay = 2; selectedClass = 4; selectedDate = tuesday_date; selectedTime = '08h00-09h00'">Gladiator<br> (0/18)</td>
+        <td class="class" onclick="selectedDay = 3; selectedClass = 4; selectedDate = wednesday_date; selectedTime = '08h00-09h00'">Gladiator / Pilates<br> (0/18)</td>
+        <td class="class" onclick="selectedDay = 4; selectedClass = 4; selectedDate = thursday_date; selectedTime = '08h00-09h00'">Gladiator<br> (0/18)</td>
+        <td class="class" onclick="selectedDay = 5; selectedClass = 4; selectedDate = friday_date; selectedTime = '08h00-09h00'">Gladiator<br> (0/18)</td>
+        <td class="class" onclick="selectedDay = 6; selectedClass = 4; selectedDate = saturday_date; selectedTime = '08h00-09h00'">Gladiator<br> (0/18)</td>
+      </tr>
+      <!--09h00-10h00-->
+      <tr>
+        <td>09h00-10h00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="class" onclick="selectedDay = 6; selectedClass = 5; selectedDate = saturday_date; selectedTime = '09h00-10h00'">Boot Camp<br> (0/25)</td>
+      </tr>
+    <!--MORNING-->
+    
+    <!--BREAK-->
+    <tr>
+      <td><br></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <!--BREAK-->
+    
+    <!--EVENING-->
+    <tr>
+      <td class="ampm">Afternoon/Evening</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+      <!--17h00-18h00-->
+      <tr>
+        <td>17h00-18h00</td>
+        <td class="class" onclick="selectedDay = 1; selectedClass = 6; selectedDate = monday_date; selectedTime = '17h00-18h00'">Gladiator<br> (0/18)</td>
+        <td class="class" onclick="selectedDay = 2; selectedClass = 6; selectedDate = tuesday_date; selectedTime = '17h00-18h00'">Boot Camp<br> (0/25)</td>
+        <td class="class" onclick="selectedDay = 3; selectedClass = 6; selectedDate = wednesday_date; selectedTime = '17h00-18h00'">Gladiator<br> (0/18)</td>
+        <td class="class" onclick="selectedDay = 4; selectedClass = 6; selectedDate = thursday_date; selectedTime = '17h00-18h00'">Boot Camp<br> (0/25)</td>
+        <td class="class" onclick="selectedDay = 5; selectedClass = 6; selectedDate = friday_date; selectedTime = '17h00-18h00'">FITstrong<br> (0/15)</td>
+        <td></td>
+      </tr>
+      <!--17h30-18h30-->
+      <tr>
+        <td>17h30-18h30</td>
+        <td class="class" onclick="selectedDay = 1; selectedClass = 7; selectedDate = monday_date; selectedTime = '17h30-18h30'">FITstrong<br> (0/15)</td>
+        <td class="class" onclick="selectedDay = 2; selectedClass = 7; selectedDate = tuesday_date; selectedTime = '17h30-18h30'">FITstrong<br> (0/15)</td>
+        <td class="class" onclick="selectedDay = 3; selectedClass = 7; selectedDate = wednesday_date; selectedTime = '17h30-18h30'">FITstrong (Obstacle Course)<br> (0/15)</td>
+        <td class="class" onclick="selectedDay = 4; selectedClass = 7; selectedDate = thursday_date; selectedTime = '17h30-18h30'">FITstrong<br> (0/15)</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <!--18h00-19h00-->
+      <tr>
+        <td>18h00-19h00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="class" onclick="selectedDay = 5; selectedClass = 8; selectedDate = friday_date; selectedTime = '18h00-19h00'">Friday FIT<br> (0/18)</td>
+        <td></td>
+      </tr>
+      <!--18h30-19h30-->
+      <tr style="border-bottom-style:hidden; !important">
+        <td>18h30-19h30</td>
+        <td class="class" onclick="selectedDay = 1; selectedClass = 9; selectedDate = monday_date; selectedTime = '18h30-19h30'">Gladiator<br> (0/18)</td>
+        <td class="class" onclick="selectedDay = 2; selectedClass = 9; selectedDate = tuesday_date; selectedTime = '18h30-19h30'">Boot Camp<br> (0/25)</td>
+        <td class="class" onclick="selectedDay = 3; selectedClass = 9; selectedDate = wednesday_date; selectedTime = '18h30-19h30'">Gladiator<br> (0/18)</td>
+        <td class="class" onclick="selectedDay = 4; selectedClass = 9; selectedDate = thursday_date; selectedTime = '18h30-19h30'">Boot Camp<br> (0/25)</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td class="class" onclick="selectedDay = 1; selectedClass = 11; selectedDate = monday_date; selectedTime = '18h30-19h30'">Pilates<br> (0/10)</td>
+        <td> </td>
+        <td class="class" onclick="selectedDay = 3; selectedClass = 11; selectedDate = wednesday_date; selectedTime = '18h30-19h30'">Pilates<br> (0/10)</td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+      <!--19h00-20h00-->
+      <tr>
+        <td>19h00-20h00</td>
+        <td class="class" onclick="selectedDay = 1; selectedClass = 10; selectedDate = monday_date; selectedTime = '19h00-20h00'">Boot Camp<br> (0/25)</td>
+        <td class="class" onclick="selectedDay = 2; selectedClass = 10; selectedDate = tuesday_date; selectedTime = '19h00-20h00'">Gladiator<br> (0/18)</td>
+        <td class="class" onclick="selectedDay = 3; selectedClass = 10; selectedDate = wednesday_date; selectedTime = '19h00-20h00'">Boot Camp<br> (0/25)</td>
+        <td class="class" onclick="selectedDay = 4; selectedClass = 10; selectedDate = thursday_date; selectedTime = '19h00-20h00'">Gladiator<br> (0/18)</td>
+        <td></td>
+        <td></td>
+      </tr>
+    <!--EVENING-->
+  </tbody></table>
+  </center>
+  <div id="book_popup">
+    <a class="b-close">x</a>
+    <center>
+      <h1 id="class_heading"></h1>
+      <h2 id="date"></h2>
+      <h2 id="time"></h2>
+      <div id="nametable">
+      <table id="names"></table>
+      </div>
+      <br>
+      <form id="form1" action="signup.php" method="GET">
+        <input name="day" hidden="" id="signup_day">
+        <input name="classnum" hidden="" id="signup_classnum">
+        <input name="name" type="text" placeholder="Name and Surname" maxlength="25">
+        <input id="submit" type="submit" value="Sign up">
+      </form>
+    </center>
+  </div>
+
+</body></html>

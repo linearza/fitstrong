@@ -1,0 +1,22 @@
+.weekly-schedule{
+  border: 1px solid $orange;
+  background: $grey;
+  font-weight: 300;
+  font-size: 14px;
+  tr{
+    &.days{
+      background: rgba(255, 255, 255, 0.1);
+    }
+    td{
+      border: 1px solid $grey-drk;
+      padding: 3px;
+      &:first-child{
+        background: rgba(255, 255, 255, 0.2); 
+      }
+      &.slot{
+        color: transparent;
+
+      }
+    }
+  }
+}

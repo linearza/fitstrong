@@ -11,6 +11,7 @@ Router.map(function() {
   });
 
   this.route('membership-options');
+  this.route('weekly-schedule');
 });
 
 export default Router;
