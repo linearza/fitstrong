@@ -4,7 +4,6 @@
   font-weight: 300;
   font-size: 14px;
   position: relative;
-  margin-bottom: 20px;
   width:100%;
   tr{
     &.days{
@@ -20,6 +19,10 @@
         background: rgba(255, 255, 255, 0.1);
         font-size: 10px;
         text-transform: uppercase;
+        letter-spacing: 7px;
+        font-size: 14px;
+        padding: 5px 0;
+        opacity: 0.4;
       }
     }
     td{
@@ -28,6 +31,8 @@
       &:first-child{
         background: rgba(255, 255, 255, 0.2);
         text-align:center;
+        font-size: 11px;
+        font-weight: 400;
       }
       &.slot{
         width: 13%;
@@ -59,19 +64,19 @@
           }
         }
         &.bc{
-          background: blue;
+          background: $orange-lgt;
           &:after{
             content: 'bc';
           }
         }
         &.fs{
-          background: red;
+          background: $red-lgt;
           &:after{
             content: 'fs';
           }
         }
         &.pl{
-          background: green;
+          background: $yellow-drk;
           &:after{
             content: 'pl';
           }
