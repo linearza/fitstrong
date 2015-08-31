@@ -3,6 +3,8 @@
   background: $grey;
   font-weight: 300;
   font-size: 14px;
+  position: relative;
+  margin: 0 10px 20px;
   tr{
     &.days{
       background: rgba(255, 255, 255, 0.1);
@@ -14,8 +16,10 @@
         background: rgba(255, 255, 255, 0.2); 
       }
       &.slot{
-        color: transparent;
-
+        width: 13%;
+        .type{
+          display: none;
+        }
       }
     }
   }
