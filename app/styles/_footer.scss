@@ -35,6 +35,7 @@
       }
       &:active{
         background: $white;
+        border-radius: 100%;
         svg{
           fill: $orange;
         }
