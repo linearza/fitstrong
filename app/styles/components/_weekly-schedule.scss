@@ -58,27 +58,41 @@
           margin: -10px 0 0 -10px;
         }
         &.gl{
-          background: $orange;
+          background: $schedule-1;
           &:after{
             content: 'gl';
           }
         }
         &.bc{
-          background: $orange-lgt;
+          background: $schedule-3;
           &:after{
             content: 'bc';
           }
         }
         &.fs{
-          background: $red-lgt;
+          background: $schedule-6;
           &:after{
             content: 'fs';
           }
         }
+        &.ff{
+          background: $schedule-2;
+          &:after{
+            content: 'ff';
+          }
+        }
         &.pl{
-          background: $yellow-drk;
+          background: $schedule-4;
           &:after{
             content: 'pl';
+          }
+        }
+        &.gl.pl{
+          background: $schedule-5;
+          &:after{
+            width: 40px;
+            margin: -10px 0 0 -20px;
+            content: 'gl/pl';
           }
         }
       }
