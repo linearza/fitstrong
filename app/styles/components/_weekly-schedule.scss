@@ -1,5 +1,4 @@
 .weekly-schedule{
-  border: 1px solid $orange;
   background: $grey;
   font-weight: 300;
   font-size: 14px;
@@ -38,6 +37,7 @@
         width: 13%;
         height: 45px;
         position: relative;
+        @include transition(background 200ms linear 200ms);
         .type{
           display: none;
           text-align: center;
@@ -82,21 +82,32 @@
           }
         }
         &.pl{
-          background: $schedule-4;
-          &:after{
-            content: 'pl';
-          }
-        }
-        &.gl.pl{
           background: $schedule-5;
           &:after{
             width: 40px;
-            margin: -10px 0 0 -20px;
-            content: 'gl/pl';
+            height: 40px;
+            margin: -20px 0 0 -20px;
+            content: 'gl/ pl';
           }
+        }
+        &.is-expanded{
+          position: absolute;
+          left: 0;
+          right: 0;
+          width: auto;
+          box-sizing: border-box;
+          z-index: 1;
+          bottom: 0;
+          top: 26px;
+          display: block;
+          height: auto;
         }
       }
     }
+  }
+  .slot-info{
+    position: absolute;
+    background: transparent;
   }
   @media (min-width: 690px) {
     tr{
