@@ -2,32 +2,19 @@ import DS from 'ember-data';
 
 var Schedule = DS.Model.extend({
 
-    start: DS.attr('date', {
-        defaultValue: "12:12:12"
-    }),
+  start: DS.attr('string', {
+    defaultValue: "00:00"
+  }),
 
-    end: DS.attr('date', {
-        defaultValue: "24:24:24"
-    }),
+  end: DS.attr('string', {
+    defaultValue: "00:00"
+  }),
 
-    mon: DS.belongsTo('slot', {
-        defaultValue: null
-    }),
-    tue: DS.belongsTo('slot', {
-        defaultValue: null
-    }),
-    wed: DS.belongsTo('slot', {
-        defaultValue: null
-    }),
-    thu: DS.belongsTo('slot', {
-        defaultValue: null
-    }),
-    fri: DS.belongsTo('slot', {
-        defaultValue: null
-    }),
-    sat: DS.belongsTo('slot', {
-        defaultValue: null
-    })
+  slots: DS.hasMany('slot', {
+    inverse: 'schedule',
+    async: true
+  })
+
 });
 
 export default Schedule;

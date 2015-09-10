@@ -1,6 +1,18 @@
+
+
+
 {{#each schedules as |schedule|}}
-  title: {{schedule.title}}
+  <tr>
+    <td>{{schedule.start}}-{{schedule.end}}</td>
+    {{#each slots as |slot|}}
+      <td class="slot gl">
+        <span class="type">{{slot.title}}</span>
+      </td>
+    {{/each}}
+  </tr>
 {{/each}}
+
+
 
 {{#if showSlotInfo}}
   <div class="slot-info">

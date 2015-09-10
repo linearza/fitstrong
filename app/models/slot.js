@@ -3,6 +3,11 @@ import DS from 'ember-data';
 export default DS.Model.extend({
 
   title: DS.attr('string'),
-  description: DS.attr('string')
+  description: DS.attr('string'),
+
+  schedule: DS.belongsTo('schedule', {
+    inverse: 'slots',
+    async: true
+  })
 
 });
