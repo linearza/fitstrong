@@ -7,10 +7,20 @@ const {
 export default Ember.Route.extend({
 
   model: function() {
-    return RSVP.hash({
+    var model = RSVP.hash({
       schedules: this.store.findAll('schedule'),
       slots: this.store.findAll('slot')
     });
-  }
+    return model;
+  },
+
+  setupController(controller, model) {
+    this._super(controller, []);
+
+    controller.setProperties({
+      schedules: model.schedules,
+      slots: model.slots
+    });
+  },
 
 });

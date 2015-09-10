@@ -1,6 +1,4 @@
 
-
-
 {{#each schedules as |schedule|}}
   <tr>
     <td>{{schedule.start}}-{{schedule.end}}</td>
@@ -10,6 +8,8 @@
       </td>
     {{/each}}
   </tr>
+{{else}}
+  Loading ...
 {{/each}}
 
 
