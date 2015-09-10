@@ -1,0 +1,33 @@
+{
+  "schedules": {
+    "1": {
+      "id": "1",
+      "start": "05:00:00",
+      "end": "06:00:00",
+      "mon": "1",
+      "tue": "1",
+      "wed": "1",
+      "thu": "1",
+      "fri": "1",
+      "sat": "1"
+    },
+    "2": {
+      "id": "2",
+      "start": "05:30:00",
+      "end": "06:30:00",
+      "mon": "1",
+      "tue": "1",
+      "wed": "1",
+      "thu": "1",
+      "fri": "1",
+      "sat": "1"
+    }
+  },
+  "slots": {
+    "1": {
+      "id": "1",
+      "title": "Gladiator"
+      "description": "Cardio and strength"
+    }
+  }
+}

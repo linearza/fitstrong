@@ -5,10 +5,12 @@ export default Ember.Component.extend({
   tagName: 'table',
   classNames: ['weekly-schedule'],
 
+  schedule: [],
+
   showSlotInfo: false,
 
   click(e) {
-    let el = e.target.closest('.slot')
+    let el = e.target.closest('.slot');
 
     if (!el) {
       return false;
