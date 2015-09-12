@@ -2,8 +2,9 @@
   "schedules": {
     "1": {
       "id": "1",
-      "start": "05:00",
-      "end": "06:00",
+      "start": "05:30",
+      "end": "06:30",
+      "period": "morning",
       "slots": {
         "1": true,
         "2": true,
@@ -15,8 +16,9 @@
     },
     "2": {
       "id": "2",
-      "start": "05:30",
-      "end": "06:30",
+      "start": "06:30",
+      "end": "07:30",
+      "period": "morning",
       "slots": {
         "7": true,
         "8": true,
@@ -28,8 +30,9 @@
     },
     "3": {
       "id": "3",
-      "start": "05:30",
-      "end": "06:30",
+      "start": "07:00",
+      "end": "08:00",
+      "period": "morning",
       "slots": {
         "13": true,
         "14": true,
@@ -41,8 +44,9 @@
     },
     "4": {
       "id": "4",
-      "start": "05:30",
-      "end": "06:30",
+      "start": "08:00",
+      "end": "09:00",
+      "period": "morning",
       "slots": {
         "19": true,
         "20": true,
@@ -54,8 +58,9 @@
     },
     "5": {
       "id": "5",
-      "start": "05:30",
-      "end": "06:30",
+      "start": "09:00",
+      "end": "10:00",
+      "period": "morning",
       "slots": {
         "25": true,
         "26": true,
@@ -67,8 +72,9 @@
     },
     "6": {
       "id": "6",
-      "start": "05:30",
-      "end": "06:30",
+      "start": "17:00",
+      "end": "18:00",
+      "period": "evening",
       "slots": {
         "31": true,
         "32": true,
@@ -80,8 +86,9 @@
     },
     "7": {
       "id": "7",
-      "start": "05:30",
-      "end": "06:30",
+      "start": "17:30",
+      "end": "18:30",
+      "period": "evening",
       "slots": {
         "37": true,
         "38": true,
@@ -93,8 +100,9 @@
     },
     "8": {
       "id": "8",
-      "start": "05:30",
-      "end": "06:30",
+      "start": "18:00",
+      "end": "19:00",
+      "period": "evening",
       "slots": {
         "42": true,
         "43": true,
@@ -106,8 +114,9 @@
     },
     "9": {
       "id": "9",
-      "start": "05:30",
-      "end": "06:30",
+      "start": "18:30",
+      "end": "19:30",
+      "period": "evening",
       "slots": {
         "48": true,
         "49": true,
@@ -119,8 +128,9 @@
     },
     "10": {
       "id": "10",
-      "start": "05:30",
-      "end": "06:30",
+      "start": "19:00",
+      "end": "20:00",
+      "period": "evening",
       "slots": {
         "54": true,
         "55": true,

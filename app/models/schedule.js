@@ -10,6 +10,10 @@ var Schedule = DS.Model.extend({
     defaultValue: "00:00"
   }),
 
+  period: DS.attr('string', {
+    defaultValue: "morning"
+  }),
+
   slots: DS.hasMany('slot', {
     inverse: 'schedule',
     async: true

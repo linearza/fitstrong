@@ -1,5 +1,18 @@
+<tr class="days">
+  <td>TIME</td>
+  <td>MON</td>
+  <td>TUE</td>
+  <td>WED</td>
+  <td>THU</td>
+  <td>FRI</td>
+  <td>SAT</td>
+</tr>
 
-{{#each schedules as |schedule|}}
+<tr class="morning">
+  <td colspan="7">Morning</td>
+</tr>
+
+{{#each morningSchedules as |schedule|}}
   <tr>
     <td>{{schedule.start}} -{{schedule.end}}</td>
 
@@ -12,122 +25,19 @@
   Loading ...
 {{/each}}
 
-<tr class="days">
-  <td>TIME</td>
-  <td>MON</td>
-  <td>TUE</td>
-  <td>WED</td>
-  <td>THU</td>
-  <td>FRI</td>
-  <td>SAT</td>
-</tr>
-<!--MORNING-->
-<tr class="morning">
-  <td colspan="7">Morning</td>
-</tr>
-<!--05h30-06h30-->
-<tr>
-  <td>05h30-06h30</td>
-  <td class="slot gl"><span class="type">Gladiator</span></td>
-  <td class="slot bc"><span class="type">Boot Camp</span></td>
-  <td class="slot gl"><span class="type">Gladiator</span></td>
-  <td class="slot bc"><span class="type">Boot Camp</span></td>
-  <td class="slot gl"><span class="type">Gladiator</span></td>
-  <td> </td>
-</tr>
-<!--06h30-07h30-->
-<tr>
-  <td>06h30-07h30</td>
-  <td class="slot bc"><span class="type">Boot Camp</span></td>
-  <td class="slot fs"><span class="type">FITstrong</span></td>
-  <td class="slot bc"><span class="type">Boot Camp</span></td>
-  <td class="slot fs"><span class="type">FITstrong</span></td>
-  <td class="slot bc"><span class="type">Boot Camp</span></td>
-  <td></td>
-</tr>
-<!--07h00-08h00-->
-<tr>
-  <td>07h00-08h00</td>
-  <td class="slot fs"><span class="type">FITstrong</span></td>
-  <td class="slot bc"><span class="type">Boot Camp</span></td>
-  <td class="slot fs"><span class="type">FITstrong</span></td>
-  <td class="slot bc"><span class="type">Boot Camp</span></td>
-  <td class="slot fs"><span class="type">FITstrong</span></td>
-  <td class="slot fs"><span class="type">FITstrong</span></td>
-</tr>
-<!--08h00-09h00-->
-<tr>
-  <td>08h00-09h00</td>
-  <td class="slot gl"><span class="type">Gladiator</span></td>
-  <td class="slot gl"><span class="type">Gladiator</span></td>
-  <td class="slot gl pl"><span class="type">Gladiator / Pilates</span></td>
-  <td class="slot gl"><span class="type">Gladiator</span></td>
-  <td class="slot gl"><span class="type">Gladiator</span></td>
-  <td class="slot gl"><span class="type">Gladiator</span></td>
-</tr>
-<!--09h00-10h00-->
-<tr>
-  <td>09h00-10h00</td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td class="slot bc"><span class="type">Boot Camp</span></td>
-</tr>
-<!--MORNING-->
-
-<!--EVENING-->
 <tr class="evening">
-  <td colspan="7">Afternoon</td>
+  <td colspan="7">Evening</td>
 </tr>
-  <!--17h00-18h00-->
-<tr>
-  <td>17h00-18h00</td>
-  <td class="slot gl"><span class="type">Gladiator</span></td>
-  <td class="slot bc"><span class="type">Boot Camp</span></td>
-  <td class="slot gl"><span class="type">Gladiator</span></td>
-  <td class="slot bc"><span class="type">Boot Camp</span></td>
-  <td class="slot fs"><span class="type">FITstrong</span></td>
-  <td></td>
-</tr>
-<!--17h30-18h30-->
-<tr>
-  <td>17h30-18h30</td>
-  <td class="slot fs"><span class="type">FITstrong</span></td>
-  <td class="slot fs"><span class="type">FITstrong</span></td>
-  <td class="slot fs oc"><span class="type">FITstrong (Obstacle Course)</span></td>
-  <td class="slot fs"><span class="type">FITstrong</span></td>
-  <td></td>
-  <td></td>
-</tr>
-<!--18h00-19h00-->
-<tr>
-  <td>18h00-19h00</td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td class="slot ff"><span class="type">Friday FIT</span></td>
-  <td></td>
-</tr>
-<!--18h30-19h30-->
-<tr>
-  <td>18h30-19h30</td>
-  <td class="slot gl pl"><span class="type">Gladiator / Pilates</span></td>
-  <td class="slot bc"><span class="type">Boot Camp</span></td>
-  <td class="slot gl pl"><span class="type">Gladiator / Pilates</span></td>
-  <td class="slot bc"><span class="type">Boot Camp</span></td>
-  <td></td>
-  <td></td>
-</tr>
-<!--18h30-19h30-->
-<tr>
-  <td>19h00-20h00</td>
-  <td class="slot bc"><span class="type">Boot Camp</span></td>
-  <td class="slot gl"><span class="type">Gladiator</span></td>
-  <td class="slot bc"><span class="type">Boot Camp</span></td>
-  <td class="slot gl"><span class="type">Gladiator</span></td>
-  <td></td>
-  <td></td>
-</tr>
+
+{{#each eveningSchedules as |schedule|}}
+  <tr>
+    <td>{{schedule.start}} -{{schedule.end}}</td>
+
+    {{#each schedule.slots as |slot|}}
+      {{training-roster-slot content=slot}}
+    {{/each}}
+
+  </tr>
+{{else}}
+  Loading ...
+{{/each}}
