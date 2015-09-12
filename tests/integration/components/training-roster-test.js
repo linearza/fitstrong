@@ -1,7 +1,10 @@
-import { moduleForComponent, test } from 'ember-qunit';
+import {
+  moduleForComponent, test
+}
+from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('weekly-schedule', 'Integration | Component | weekly schedule', {
+moduleForComponent('training-roster', 'Integration | Component | training-roster', {
   integration: true
 });
 
@@ -11,15 +14,15 @@ test('it renders', function(assert) {
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });
 
-  this.render(hbs`{{weekly-schedule}}`);
+  this.render(hbs `{{training-roster}}`);
 
   assert.equal(this.$().text().trim(), '');
 
   // Template block usage:
-  this.render(hbs`
-    {{#weekly-schedule}}
+  this.render(hbs `
+    {{#training-roster}}
       template block text
-    {{/weekly-schedule}}
+    {{/training-roster}}
   `);
 
   assert.equal(this.$().text().trim(), 'template block text');

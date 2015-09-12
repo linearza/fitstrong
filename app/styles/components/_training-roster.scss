@@ -1,4 +1,4 @@
-.weekly-schedule{
+.training-roster{
   background: $grey;
   font-weight: 300;
   font-size: 14px;
@@ -57,31 +57,31 @@
           text-align: center;
           margin: -10px 0 0 -10px;
         }
-        &.gl{
+        &.gl, &.gladiator{
           background: $schedule-1;
           &:after{
             content: 'gl';
           }
         }
-        &.bc{
+        &.bc, &.bootcamp{
           background: $schedule-3;
           &:after{
             content: 'bc';
           }
         }
-        &.fs{
+        &.fs, &.fitstrong, &.fitstrong-ob{
           background: $schedule-6;
           &:after{
             content: 'fs';
           }
         }
-        &.ff{
+        &.ff, &.friday-fit{
           background: $schedule-2;
           &:after{
             content: 'ff';
           }
         }
-        &.pl{
+        &.pl, &.gladiator-pilates{
           background: $schedule-5;
           &:after{
             width: 40px;

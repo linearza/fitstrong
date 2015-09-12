@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
 
   tagName: 'table',
-  classNames: ['weekly-schedule'],
+  classNames: ['training-roster'],
 
   schedule: [],
 

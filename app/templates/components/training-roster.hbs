@@ -3,8 +3,8 @@
   <tr>
     <td>{{schedule.start}}-{{schedule.end}}</td>
     {{#each schedule.slots as |slot|}}
-      <td class="slot gl">
-        <span class="type">{{slot.title}}</span>
+      <td class="slot {{slot.type}}">
+        <span class="type">{{slot.type}}</span>
       </td>
     {{/each}}
   </tr>
