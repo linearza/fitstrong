@@ -64,6 +64,7 @@
     @include linear-gradient($yellow-lgt, $yellow); 
   }
   &.bootcamp{
+    margin-bottom: 0;
     &:after{
      @include linear-gradient($yellow, $yellow-drk);
     }
@@ -84,11 +85,12 @@
     }
   }
   @media (min-width: 575px) {
-    width: 49%;
+    width: 45%;
     max-width: 350px;
     display: inline-block;
     vertical-align: top;
     box-sizing: border-box;
+    margin: 0px 10px 20px 10px;
     .description{
       min-height: 48px;
     }
