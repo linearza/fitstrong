@@ -24,6 +24,13 @@ Ember.Router.reopen({
 
   closeMenu: function() {
     this.applicationController().set('isMenuExpanded', false);
+  }.on('willTransition'),
+
+  scrollUp: function() {
+    $('main').animate({
+      scrollTop: 0
+    }, 600);
+    return false;
   }.on('willTransition')
 
 });
