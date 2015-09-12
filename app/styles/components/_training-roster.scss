@@ -95,6 +95,11 @@
             content: 'gl & pl';
           }
         }
+        &.no-class{
+          .type{
+            display: none;
+          }
+        }
         &:hover{
           .type{
             opacity: 1;

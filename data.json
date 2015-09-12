@@ -25,6 +25,110 @@
         "11": true,
         "12": true
       }
+    },
+    "3": {
+      "id": "3",
+      "start": "05:30",
+      "end": "06:30",
+      "slots": {
+        "13": true,
+        "14": true,
+        "15": true,
+        "16": true,
+        "17": true,
+        "18": true
+      }
+    },
+    "4": {
+      "id": "4",
+      "start": "05:30",
+      "end": "06:30",
+      "slots": {
+        "19": true,
+        "20": true,
+        "21": true,
+        "22": true,
+        "23": true,
+        "24": true
+      }
+    },
+    "5": {
+      "id": "5",
+      "start": "05:30",
+      "end": "06:30",
+      "slots": {
+        "25": true,
+        "26": true,
+        "27": true,
+        "28": true,
+        "29": true,
+        "30": true
+      }
+    },
+    "6": {
+      "id": "6",
+      "start": "05:30",
+      "end": "06:30",
+      "slots": {
+        "31": true,
+        "32": true,
+        "33": true,
+        "34": true,
+        "35": true,
+        "36": true
+      }
+    },
+    "7": {
+      "id": "7",
+      "start": "05:30",
+      "end": "06:30",
+      "slots": {
+        "37": true,
+        "38": true,
+        "39": true,
+        "40": true,
+        "41": true,
+        "42": true
+      }
+    },
+    "8": {
+      "id": "8",
+      "start": "05:30",
+      "end": "06:30",
+      "slots": {
+        "42": true,
+        "43": true,
+        "44": true,
+        "45": true,
+        "46": true,
+        "47": true
+      }
+    },
+    "9": {
+      "id": "9",
+      "start": "05:30",
+      "end": "06:30",
+      "slots": {
+        "48": true,
+        "49": true,
+        "50": true,
+        "51": true,
+        "52": true,
+        "53": true
+      }
+    },
+    "10": {
+      "id": "10",
+      "start": "05:30",
+      "end": "06:30",
+      "slots": {
+        "54": true,
+        "55": true,
+        "56": true,
+        "57": true,
+        "58": true,
+        "59": true
+      }
     }
   },
   "slots": {
@@ -37,30 +141,31 @@
     "2": {
       "id": "2",
       "schedule": "1",
-      "type": "fitstrong",
+      "type": "bootcamp",
       "description": "Cardio and strength"
     },
     "3": {
       "id": "3",
       "schedule": "1",
-      "type": "no-class"
+      "type": "gladiator",
+      "description": "Cardio and strength"
     },
     "4": {
       "id": "4",
       "schedule": "1",
-      "type": "gladiator-pilates",
+      "type": "bootcamp",
       "description": "Cardio and strength"
     },
     "5": {
       "id": "5",
       "schedule": "1",
-      "type": "fitstrong-ob",
+      "type": "gladiator",
       "description": "Cardio and strength"
     },
     "6": {
       "id": "6",
       "schedule": "1",
-      "type": "friday-fit",
+      "type": "no-class",
       "description": "Cardio and strength"
     },
     "7": {
@@ -72,18 +177,20 @@
     "8": {
       "id": "8",
       "schedule": "2",
-      "type": "bootcamp",
+      "type": "fitstrong",
       "description": "Cardio and strength"
     },
     "9": {
       "id": "9",
       "schedule": "2",
-      "type": "no-class"
+      "type": "bootcamp",
+      "description": "Cardio and strength"
     },
     "10": {
       "id": "10",
       "schedule": "2",
-      "type": "no-class"
+      "type": "fitstrong",
+      "description": "Cardio and strength"
     },
     "11": {
       "id": "11",
@@ -94,8 +201,279 @@
     "12": {
       "id": "12",
       "schedule": "2",
+      "type": "no-class",
+      "description": "Cardio and strength"
+    },
+    "13": {
+      "id": "13",
+      "schedule": "3",
+      "type": "fitstrong",
+      "description": "Cardio and strength"
+    },
+    "14": {
+      "id": "14",
+      "schedule": "3",
       "type": "bootcamp",
       "description": "Cardio and strength"
+    },
+    "15": {
+      "id": "15",
+      "schedule": "3",
+      "type": "fitstrong",
+      "description": "Cardio and strength"
+    },
+    "16": {
+      "id": "16",
+      "schedule": "3",
+      "type": "bootcamp",
+      "description": "Cardio and strength"
+    },
+    "17": {
+      "id": "17",
+      "schedule": "3",
+      "type": "fitstrong",
+      "description": "Cardio and strength"
+    },
+    "18": {
+      "id": "18",
+      "schedule": "3",
+      "type": "fitstrong",
+      "description": "Cardio and strength"
+    },
+    "19": {
+      "id": "19",
+      "schedule": "4",
+      "type": "gladiator",
+      "description": "Cardio and strength"
+    },
+    "20": {
+      "id": "20",
+      "schedule": "4",
+      "type": "gladiator",
+      "description": "Cardio and strength"
+    },
+    "21": {
+      "id": "21",
+      "schedule": "4",
+      "type": "gladiator-pilates",
+      "description": "Cardio and strength"
+    },
+    "22": {
+      "id": "22",
+      "schedule": "4",
+      "type": "gladiator",
+      "description": "Cardio and strength"
+    },
+    "23": {
+      "id": "23",
+      "schedule": "4",
+      "type": "gladiator",
+      "description": "Cardio and strength"
+    },
+    "24": {
+      "id": "24",
+      "schedule": "4",
+      "type": "gladiator",
+      "description": "Cardio and strength"
+    },
+    "25": {
+      "id": "25",
+      "schedule": "5",
+      "type": "no-class"
+    },
+    "26": {
+      "id": "26",
+      "schedule": "5",
+      "type": "no-class"
+    },
+    "27": {
+      "id": "27",
+      "schedule": "5",
+      "type": "no-class"
+    },
+    "28": {
+      "id": "28",
+      "schedule": "5",
+      "type": "no-class"
+    },
+    "29": {
+      "id": "29",
+      "schedule": "5",
+      "type": "no-class"
+    },
+    "30": {
+      "id": "30",
+      "schedule": "5",
+      "type": "bootcamp",
+      "description": "Cardio and strength"
+    },
+    "31": {
+      "id": "31",
+      "schedule": "6",
+      "type": "gladiator",
+      "description": "Cardio and strength"
+    },
+    "32": {
+      "id": "32",
+      "schedule": "6",
+      "type": "bootcamp",
+      "description": "Cardio and strength"
+    },
+    "33": {
+      "id": "33",
+      "schedule": "6",
+      "type": "gladiator",
+      "description": "Cardio and strength"
+    },
+    "34": {
+      "id": "34",
+      "schedule": "6",
+      "type": "bootcamp",
+      "description": "Cardio and strength"
+    },
+    "35": {
+      "id": "35",
+      "schedule": "6",
+      "type": "fitstrong",
+      "description": "Cardio and strength"
+    },
+    "36": {
+      "id": "36",
+      "schedule": "6",
+      "type": "no-class"
+    },
+    "37": {
+      "id": "37",
+      "schedule": "7",
+      "type": "fitstrong",
+      "description": "Cardio and strength"
+    },
+    "38": {
+      "id": "38",
+      "schedule": "7",
+      "type": "fitstrong",
+      "description": "Cardio and strength"
+    },
+    "39": {
+      "id": "39",
+      "schedule": "7",
+      "type": "fitstrong-ob",
+      "description": "Cardio and strength"
+    },
+    "40": {
+      "id": "40",
+      "schedule": "7",
+      "type": "fitstrong",
+      "description": "Cardio and strength"
+    },
+    "41": {
+      "id": "41",
+      "schedule": "7",
+      "type": "no-class"
+    },
+    "42": {
+      "id": "42",
+      "schedule": "7",
+      "type": "no-class"
+    },
+    "43": {
+      "id": "43",
+      "schedule": "8",
+      "type": "no-class"
+    },
+    "44": {
+      "id": "43",
+      "schedule": "8",
+      "type": "no-class"
+    },
+    "45": {
+      "id": "43",
+      "schedule": "8",
+      "type": "no-class"
+    },
+    "46": {
+      "id": "43",
+      "schedule": "8",
+      "type": "no-class"
+    },
+    "47": {
+      "id": "47",
+      "schedule": "8",
+      "type": "fitstrong",
+      "description": "Cardio and strength"
+    },
+    "48": {
+      "id": "48",
+      "schedule": "8",
+      "type": "no-class"
+    },
+    "49": {
+      "id": "49",
+      "schedule": "9",
+      "type": "gladiator-pilates",
+      "description": "Cardio and strength"
+    },
+    "50": {
+      "id": "50",
+      "schedule": "9",
+      "type": "bootcamp",
+      "description": "Cardio and strength"
+    },
+    "51": {
+      "id": "51",
+      "schedule": "9",
+      "type": "gladiator-pilates",
+      "description": "Cardio and strength"
+    },
+    "52": {
+      "id": "52",
+      "schedule": "9",
+      "type": "bootcamp",
+      "description": "Cardio and strength"
+    },
+    "53": {
+      "id": "53",
+      "schedule": "9",
+      "type": "no-class"
+    },
+    "54": {
+      "id": "54",
+      "schedule": "9",
+      "type": "no-class"
+    },
+    "55": {
+      "id": "55",
+      "schedule": "10",
+      "type": "bootcamp",
+      "description": "Cardio and strength"
+    },
+    "56": {
+      "id": "56",
+      "schedule": "10",
+      "type": "gladiator",
+      "description": "Cardio and strength"
+    },
+    "57": {
+      "id": "57",
+      "schedule": "10",
+      "type": "bootcamp",
+      "description": "Cardio and strength"
+    },
+    "58": {
+      "id": "58",
+      "schedule": "10",
+      "type": "gladiator",
+      "description": "Cardio and strength"
+    },
+    "59": {
+      "id": "59",
+      "schedule": "10",
+      "type": "no-class"
+    },
+    "60": {
+      "id": "60",
+      "schedule": "10",
+      "type": "no-class"
     }
   }
 }
