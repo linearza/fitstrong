@@ -1,25 +1,16 @@
 
 {{#each schedules as |schedule|}}
   <tr>
-    <td>{{schedule.start}}-{{schedule.end}}</td>
+    <td>{{schedule.start}} -{{schedule.end}}</td>
+
     {{#each schedule.slots as |slot|}}
-      <td class="slot {{slot.type}}">
-        <span class="type">{{slot.type}}</span>
-      </td>
+      {{training-roster-slot content=slot}}
     {{/each}}
+
   </tr>
 {{else}}
   Loading ...
 {{/each}}
-
-
-
-{{#if showSlotInfo}}
-  <div class="slot-info">
-    This class is focused on cardio and strength.<br />
-    Some more description and text, maybe some graphics or so blah blah blah
-  </div>
-{{/if}}
 
 <tr class="days">
   <td>TIME</td>
