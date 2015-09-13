@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 const {
-  computed, alias
+  computed
 } = Ember;
 
 export default Ember.Component.extend({
@@ -10,7 +10,7 @@ export default Ember.Component.extend({
   classNameBindings: [':slot', 'type'],
 
   content: [],
-  type: Ember.computed.alias('content.type'),
+  type: computed.alias('content.type'),
 
   title: function() {
     switch (this.get('type')) {
@@ -27,7 +27,7 @@ export default Ember.Component.extend({
 
   }.property('type'),
 
-  click(e) {
+  click() {
     let el = this.get('element');
 
     if (!el) {
