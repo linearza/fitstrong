@@ -1,5 +1,8 @@
 .training-roster{
   background: $grey;
+  border-radius: 7px;
+  border: 7px solid $grey;
+  overflow: hidden;
   font-weight: 300;
   font-size: 14px;
   position: relative;
@@ -25,7 +28,8 @@
       }
     }
     td{
-      border: 1px solid $grey-drk;
+      border: 1px solid $grey;
+      background: $grey-lgt-1;
       padding: 3px;
       &:first-child{
         background: rgba(255, 255, 255, 0.2);
