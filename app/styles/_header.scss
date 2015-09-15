@@ -1,6 +1,6 @@
 .app-header{
   position: relative;
-  top: 0px;
+  top: -10px;
   height: 40px;
   width: 100%;
   box-sizing: border-box;
@@ -16,7 +16,7 @@
     background: $orange;
     @include border-bottom-radius(5px);
     box-shadow: 0px 1px 1px 0px rgba(50, 50, 50, 0.75);
-    @include transition(transform 100ms linear, opacity 100ms linear);
+    @include transition(transform 300ms ease-in 300ms, opacity 100ms linear);
     @include transform(translate3d(0px, 0px, 0px));
     img{
       max-width: 60px;
