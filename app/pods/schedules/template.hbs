@@ -1,0 +1,53 @@
+<article>
+  <h2 class="heading">Weekly schedule</h2>
+  
+  <table class="training-roster">
+    <tr class="spacer"></tr>
+
+    <tr class="days">
+      <td>TIME</td>
+      <td>MON</td>
+      <td>TUE</td>
+      <td>WED</td>
+      <td>THU</td>
+      <td>FRI</td>
+      <td>SAT</td>
+    </tr>
+
+    <tr class="morning">
+      <td colspan="7">Morning</td>
+    </tr>
+
+    {{#each morningSchedules as |schedule|}}
+      <tr>
+        <td>{{schedule.start}} -{{schedule.end}}</td>
+
+        {{#each schedule.slots as |slot|}}
+          {{schedule-item slot=slot}}
+        {{/each}}
+
+      </tr>
+    {{else}}
+      Loading ...
+    {{/each}}
+
+    <tr class="evening">
+      <td colspan="7">Evening</td>
+    </tr>
+
+    {{#each eveningSchedules as |schedule|}}
+      <tr>
+        <td>{{schedule.start}} -{{schedule.end}}</td>
+
+        {{#each schedule.slots as |slot|}}
+          {{schedule-item slot=slot}}
+        {{/each}}
+
+      </tr>
+    {{else}}
+      Loading ...
+    {{/each}}
+
+    </table>
+
+</article>

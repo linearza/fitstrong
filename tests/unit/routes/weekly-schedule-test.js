@@ -1,6 +1,9 @@
-import { moduleFor, test } from 'ember-qunit';
+import {
+  moduleFor, test
+}
+from 'ember-qunit';
 
-moduleFor('route:weekly-schedule', 'Unit | Route | weekly schedule', {
+moduleFor('route:schedule', 'Unit | Route | Schedule', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
 });

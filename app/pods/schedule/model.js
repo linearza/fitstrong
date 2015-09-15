@@ -19,6 +19,11 @@ var Schedule = DS.Model.extend({
     async: true
   })
 
+  // orderedSlots: function() {
+  //     this.get('slots').orderBy('createdAt'); /
+  // }.property('slots.[]'),
+
+
 });
 
 export default Schedule;

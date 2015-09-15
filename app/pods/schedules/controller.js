@@ -1,10 +1,8 @@
 import Ember from 'ember';
 
-export default Ember.Component.extend({
+export default Ember.Controller.extend({
 
-  tagName: 'table',
-  classNames: ['training-roster'],
-
+  // setup attrs
   schedules: [],
 
   morningSchedules: function() {
@@ -14,6 +12,5 @@ export default Ember.Component.extend({
   eveningSchedules: function() {
     return this.get('schedules').filterBy('period', 'evening');
   }.property('schedules.[]')
-
 
 });

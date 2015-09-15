@@ -1,6 +1,9 @@
-import { moduleFor, test } from 'ember-qunit';
+import {
+  moduleFor, test
+}
+from 'ember-qunit';
 
-moduleFor('controller:membership-options', {
+moduleFor('controller:memberships', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
 });

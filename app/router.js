@@ -10,8 +10,9 @@ Router.map(function() {
     path: '/'
   });
 
-  this.route('membership-options');
-  this.route('weekly-schedule');
+  this.route('memberships');
+
+  this.route('schedules');
 });
 
 export default Router;
