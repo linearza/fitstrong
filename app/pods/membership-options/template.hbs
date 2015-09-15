@@ -2,6 +2,33 @@
   <h2 class="heading">Membership options</h2>
 
 
+
+  {{#each memberships as |membership|}}
+
+    <div class="membership-option {{membership.type}}">
+      <h3 class="title">{{membership.title}}</h3>
+      <h4 class="description">{{membership.description}}</h4>
+      
+      <h5 class="contracts">Contracts</h5>
+      <table class="contracts-table">
+        <tr>
+          <td>{{membership.optionA}}</td>
+          <td>{{membership.optionB}}</td>
+        </tr>
+        <tr>
+          <td>{{membership.optionAPrice}}</td>
+          <td>{{membership.optionBPrice}}</td>
+        </tr>
+      </table>
+    </div>
+
+  {{else}}
+
+    Loading ...
+
+  {{/each}}
+
+
   <div class="membership-option day-rate">
     <h3 class="title">Day rate</h3>
     <h4 class="description">Full access - allows use of all equipment indoors and out, including any classes</h4>

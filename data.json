@@ -485,5 +485,52 @@
       "schedule": "10",
       "type": "no-class"
     }
+  },
+  "membership": {
+    "1": {
+      "id": "1",
+      "type": "day-rate",
+      "description": "Full access - allows use of all equipment indoors and out, including any classes",
+      "option_a": "Full Access",
+      "option_a_price": "R90",
+      "optiona_b": "Pilates & Bootcamp",
+      "optiona_b_price": "R70"
+    },
+    "2": {
+      "id": "2",
+      "type": "bootcamp",
+      "description": "Unlimited Bootcamp & Friday Fit classes",
+      "option_a": "6 months",
+      "option_a_price": "R400 pm",
+      "optiona_b": "1 month",
+      "optiona_b_price": "R500 pm"
+    },
+    "3": {
+      "id": "3",
+      "type": "all-inclusive-1",
+      "description": "2 Fitstrong/Gladiator classes per week",
+      "option_a": "6 months",
+      "option_a_price": "R510 pm",
+      "optiona_b": "1 month",
+      "optiona_b_price": "R610 pm"
+    },
+    "4": {
+      "id": "4",
+      "type": "all-inclusive-2",
+      "description": "3 Fitstrong/Gladiator classes per week",
+      "option_a": "6 months",
+      "option_a_price": "R600 pm",
+      "optiona_b": "1 month",
+      "optiona_b_price": "R700 pm"
+    },
+    "5": {
+      "id": "5",
+      "type": "all-inclusive-3",
+      "description": "Unlimited Fitstrong/Gladiator classes per week",
+      "option_a": "6 months",
+      "option_a_price": "R700 pm",
+      "optiona_b": "1 month",
+      "optiona_b_price": "R800 pm"
+    }
   }
 }
