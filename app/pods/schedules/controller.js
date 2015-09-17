@@ -3,14 +3,15 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
 
   // setup attrs
-  schedules: [],
+  scheduleRows: [],
 
   morningSchedules: function() {
-    return this.get('schedules').filterBy('period', 'morning');
-  }.property('schedules.[]'),
+    console.log('>>>', this.get('scheduleRows').filterBy('period', 'morning'));
+    return this.get('scheduleRows').filterBy('period', 'morning');
+  }.property('scheduleRows.[]'),
 
   eveningSchedules: function() {
-    return this.get('schedules').filterBy('period', 'evening');
-  }.property('schedules.[]')
+    return this.get('scheduleRows').filterBy('period', 'evening');
+  }.property('scheduleRows.[]')
 
 });

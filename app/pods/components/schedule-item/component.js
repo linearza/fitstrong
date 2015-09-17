@@ -3,9 +3,9 @@ import Ember from 'ember';
 export default Ember.Component.extend({
 
   tagName: 'td',
-  classNameBindings: [':slot', 'slot.type'],
+  classNameBindings: [':schedule-item', 'scheduleItem.type'],
 
-  slot: null,
+  scheduleItem: null,
 
   click() {
     let el = this.get('element');

@@ -1,7 +1,7 @@
 <article>
   <h2 class="heading">Weekly schedule</h2>
   
-  <table class="training-roster">
+  <table class="schedules">
     <tr class="spacer"></tr>
 
     <tr class="days">
@@ -18,12 +18,12 @@
       <td colspan="7">Morning</td>
     </tr>
 
-    {{#each morningSchedules as |schedule|}}
+    {{#each morningSchedules as |scheduleRow|}}
       <tr>
-        <td>{{schedule.start}} -{{schedule.end}}</td>
+        <td>{{scheduleRow.start}} -{{scheduleRow.end}}</td>
 
-        {{#each schedule.slots as |slot|}}
-          {{schedule-item slot=slot}}
+        {{#each scheduleRow.scheduleItems as |scheduleItem|}}
+          {{schedule-item scheduleItem=scheduleItem}}
         {{/each}}
 
       </tr>
@@ -35,12 +35,12 @@
       <td colspan="7">Evening</td>
     </tr>
 
-    {{#each eveningSchedules as |schedule|}}
+    {{#each eveningSchedules as |scheduleRow|}}
       <tr>
-        <td>{{schedule.start}} -{{schedule.end}}</td>
+        <td>{{scheduleRow.start}} -{{scheduleRow.end}}</td>
 
-        {{#each schedule.slots as |slot|}}
-          {{schedule-item slot=slot}}
+        {{#each scheduleRow.scheduleItems as |scheduleItem|}}
+          {{schedule-item scheduleItem=scheduleItem}}
         {{/each}}
 
       </tr>

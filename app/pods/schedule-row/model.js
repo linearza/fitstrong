@@ -1,6 +1,6 @@
 import DS from 'ember-data';
 
-var Schedule = DS.Model.extend({
+var ScheduleRow = DS.Model.extend({
 
   start: DS.attr('string', {
     defaultValue: "00:00"
@@ -14,8 +14,8 @@ var Schedule = DS.Model.extend({
     defaultValue: "morning"
   }),
 
-  slots: DS.hasMany('slot', {
-    inverse: 'schedule',
+  scheduleItems: DS.hasMany('scheduleItem', {
+    inverse: 'scheduleRow',
     async: true
   })
 
@@ -26,4 +26,4 @@ var Schedule = DS.Model.extend({
 
 });
 
-export default Schedule;
+export default ScheduleRow;
