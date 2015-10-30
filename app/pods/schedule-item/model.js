@@ -1,12 +1,8 @@
 import DS from 'ember-data';
 
-const GLADIATOR_PILATES = 'gladiator-pilates',
-  FITSTRONG_OB = 'fitstrong-ob',
-  NO_CLASS = 'no-class';
-
-export {
-  GLADIATOR_PILATES, FITSTRONG_OB, NO_CLASS
-};
+const GLADIATOR_PILATES = 'gladiator-pilates';
+const FITSTRONG_OB = 'fitstrong-ob';
+const NO_CLASS = 'no-class';
 
 export default DS.Model.extend({
 

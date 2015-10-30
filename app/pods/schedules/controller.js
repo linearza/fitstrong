@@ -6,7 +6,6 @@ export default Ember.Controller.extend({
   scheduleRows: [],
 
   morningSchedules: function() {
-    console.log('>>>', this.get('scheduleRows').filterBy('period', 'morning'));
     return this.get('scheduleRows').filterBy('period', 'morning');
   }.property('scheduleRows.[]'),
 
