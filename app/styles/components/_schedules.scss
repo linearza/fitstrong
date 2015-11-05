@@ -1,4 +1,4 @@
-.training-roster{
+.schedules{
   background: $grey;
   border-radius: 7px;
   border: 7px solid $grey;
@@ -6,7 +6,11 @@
   font-weight: 300;
   font-size: 14px;
   position: relative;
+  box-sizing: border-box;
   width:100%;
+  .spacer{
+    height: 8px;
+  }
   tr{
     &.days{
       background: rgba(255, 255, 255, 0.1);
@@ -24,7 +28,7 @@
         letter-spacing: 7px;
         font-size: 14px;
         padding: 5px 0;
-        opacity: 0.4;
+        // opacity: 0.4;
       }
     }
     td{
@@ -37,10 +41,11 @@
         font-size: 11px;
         font-weight: 400;
       }
-      &.slot{
+      &.schedule-item{
         width: 13%;
         height: 45px;
         position: relative;
+        // @include transform(translate3d(0px, 0px, 0px));
         @include transition(background 200ms linear 200ms);
         font-size: 11px;
         text-transform: uppercase;
@@ -48,8 +53,8 @@
         .type{
           display: none;
           text-align: center;
-          opacity: 0.7;
-          @include transition(opacity 100ms linear 100ms);
+          // opacity: 0.7;
+          // @include transition(opacity 100ms linear 100ms);
         }
         &:after{
           content: '';
@@ -124,14 +129,24 @@
       }
     }
   }
-  .slot-info{
+  .item-info{
     position: absolute;
     background: transparent;
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    border-radius: 5px 5px 0px 0px;
+    left:1px;
+    top:0;
+    right:0;
+    height: 8px;
+    @include linear-gradient($grey-lgt-1, $grey); 
   }
   @media (min-width: 690px) {
     tr{
       td{
-        &.slot{
+        &.schedule-item{
           .type{
             display: block;
           }

@@ -1,8 +1,35 @@
-<article class="page-membership-options">
+<article class="page-memberships">
   <h2 class="heading">Membership options</h2>
 
 
-  <div class="membership-option day-rate">
+{{!-- 
+  {{#each memberships as |membership|}}
+
+    <div class="membership {{membership.type}}">
+      <h3 class="title">{{membership.title}}</h3>
+      <h4 class="description">{{membership.description}}</h4>
+      
+      <h5 class="contracts">Contracts</h5>
+      <table class="contracts-table">
+        <tr>
+          <td>{{membership.optionA}}</td>
+          <td>{{membership.optionB}}</td>
+        </tr>
+        <tr>
+          <td>{{membership.optionAPrice}}</td>
+          <td>{{membership.optionBPrice}}</td>
+        </tr>
+      </table>
+    </div>
+
+  {{else}}
+
+    Loading ...
+
+  {{/each}}
+ --}}
+
+  <div class="membership day-rate">
     <h3 class="title">Day rate</h3>
     <h4 class="description">Full access - allows use of all equipment indoors and out, including any classes</h4>
     
@@ -19,7 +46,7 @@
     </table>
   </div>
 
-  <div class="membership-option bootcamp">
+  <div class="membership bootcamp">
     <h3 class="title">Bootcamp membership</h3>
     <h4 class="description">Unlimited Bootcamp &amp; Friday Fit classes</h4>
     
@@ -38,7 +65,7 @@
 
   <br />
   
-  <div class="membership-option all-inclusive-one">
+  <div class="membership all-inclusive-one">
     <h3 class="title">All inclusive - Tier 1</h3>
     <h4 class="description">2 Fitstrong/Gladiator classes per week</h4>
     
@@ -55,7 +82,7 @@
     </table>
   </div>
 
-  <div class="membership-option all-inclusive-two">
+  <div class="membership all-inclusive-two">
     <h3 class="title">All inclusive - Tier 2</h3>
     <h4 class="description">3 Fitstrong/Gladiator classes per week</h4>
     
@@ -72,7 +99,7 @@
     </table>
   </div>
 
-  <div class="membership-option all-inclusive-three">
+  <div class="membership all-inclusive-three">
     <h3 class="title">All inclusive - Tier 3</h3>
     <h4 class="description">Unlimited Fitstrong/Gladiator classes per week</h4>
     

@@ -3,14 +3,14 @@ import Ember from 'ember';
 export default Ember.Route.extend({
 
   model: function() {
-    return this.store.findAll('schedule');
+    return this.store.findAll('scheduleRow');
   },
 
   setupController(controller, model) {
     this._super(controller, null);
 
     controller.setProperties({
-      schedules: model
+      scheduleRows: model
     });
   },
 
